@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
-//const concat = require('gulp-concat');
-//const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const cssnano = require('gulp-cssnano');
 const browserSync = require('browser-sync').create();
@@ -41,14 +41,14 @@ async function sassTask() {
 }
 
 // //Об'єднання і стиснення JS-файлів
-// function scripts() {
-//     return gulp.src("src/js/*.js")
-//         .pipe(concat('scripts.js'))
-//         .pipe(uglify())
-//         .pipe(rename({ suffix: '.min' }))
-//         .pipe(gulp.dest("dist/js"))
-//         .pipe(browserSync.stream());
-// }
+function scripts() {
+    return gulp.src("src/js/*.js")
+        .pipe(concat('scripts.js'))
+        .pipe(uglify())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest("dist/js"))
+        .pipe(browserSync.stream());
+}
 
 // Стиснення зображень
 async function imgs() {
@@ -77,12 +77,12 @@ function browserSyncInit(done) {
 function watchFiles() {
     gulp.watch("src/*.html", html);
     gulp.watch("src/scss/*.sass", sassTask);
-    //gulp.watch("src/js/*.js", scripts);
+    gulp.watch("src/js/*.js", scripts);
     gulp.watch("src/img/*.{jpg,jpeg,png,gif}", imgs);
 }
 
 // Запуск тасків за замовчуванням з BrowserSync і відстеженням змін
 exports.default = gulp.series(
-    gulp.parallel(html, sassTask, imgs),
+    gulp.parallel(html, sassTask, scripts, imgs),
     gulp.parallel(watchFiles, browserSyncInit)
 );

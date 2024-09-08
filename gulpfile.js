@@ -6,26 +6,25 @@ const rename = require('gulp-rename');
 const cssnano = require('gulp-cssnano');
 const browserSync = require('browser-sync').create();
 
-// Динамічний імпорт ESM-модуля autoprefixer
+// Dynamic import of ESM module autoprefixer
 async function getAutoprefixer() {
     const autoprefixer = await import('gulp-autoprefixer');
     return autoprefixer.default;
 }
-
 
 async function getImagemin() {
     const imagemin = await import('gulp-imagemin');
     return imagemin.default;
 }
 
-// Обробка HTML
+// HTML processing
 function html() {
     return gulp.src("src/*.html")
         .pipe(gulp.dest("dist"))
         .pipe(browserSync.stream());
 }
 
-// Компіляція Sass в CSS, додавання префіксів та мінімізація коду
+// Compile Sass to CSS, add prefixes and minify the code
 async function sassTask() {
     const autoprefixer = await getAutoprefixer();
     return gulp.src("src/scss/*.sass")
@@ -40,7 +39,7 @@ async function sassTask() {
         .pipe(browserSync.stream());
 }
 
-// //Об'єднання і стиснення JS-файлів
+// Combine and minify JS files
 function scripts() {
     return gulp.src("src/js/*.js")
         .pipe(concat('scripts.js'))
@@ -50,7 +49,7 @@ function scripts() {
         .pipe(browserSync.stream());
 }
 
-// Стиснення зображень
+// Compress images
 async function imgs() {
     const imagemin = await getImagemin();
     return gulp.src("src/img/*.{jpg,jpeg,png,gif}")
@@ -63,7 +62,7 @@ async function imgs() {
         .pipe(browserSync.stream());
 }
 
-// Ініціалізація BrowserSync сервера
+// Initialize BrowserSync server
 function browserSyncInit(done) {
     browserSync.init({
         server: {
@@ -73,7 +72,7 @@ function browserSyncInit(done) {
     done();
 }
 
-// Відстеження за змінами у файлах
+// Watch for changes in files
 function watchFiles() {
     gulp.watch("src/*.html", html);
     gulp.watch("src/scss/*.sass", sassTask);
@@ -81,7 +80,7 @@ function watchFiles() {
     gulp.watch("src/img/*.{jpg,jpeg,png,gif}", imgs);
 }
 
-// Запуск тасків за замовчуванням з BrowserSync і відстеженням змін
+// Default task to run BrowserSync and watch for changes
 exports.default = gulp.series(
     gulp.parallel(html, sassTask, scripts, imgs),
     gulp.parallel(watchFiles, browserSyncInit)

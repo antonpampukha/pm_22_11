@@ -80,6 +80,13 @@ function watchFiles() {
     gulp.watch("src/img/*.{jpg,jpeg,png,gif}", imgs);
 }
 
+
+exports.html = html;
+exports.sass = sassTask;
+exports.scripts = scripts;
+exports.imgs = imgs;
+exports.watch = gulp.parallel(watchFiles, browserSyncInit);
+
 // Default task to run BrowserSync and watch for changes
 exports.default = gulp.series(
     gulp.parallel(html, sassTask, scripts, imgs),

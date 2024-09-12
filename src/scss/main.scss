@@ -1,2 +1,107 @@
 @import "./blocks/header";
 @import "./blocks/footer";
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.resume {
+  display: flex;
+  width: 900px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-section {
+  width: 60%;
+  padding: 20px;
+  border-right: 2px solid #eee;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  p {
+    color: #666;
+    line-height: 1.6;
+  }
+
+  .job-experience {
+    margin-bottom: 20px;
+
+    .job {
+      margin-bottom: 15px;
+
+      h3 {
+        font-size: 18px;
+        color: #333;
+      }
+
+      span {
+        display: block;
+        color: #777;
+        font-size: 14px;
+      }
+
+      p {
+        font-size: 14px;
+        color: #555;
+      }
+    }
+  }
+
+  .skills ul, .language-hobbies ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      font-size: 16px;
+      color: #555;
+      padding: 5px 0;
+    }
+  }
+}
+
+.right-section {
+  width: 40%;
+  padding: 20px;
+  background-color: #f9f9f9;
+
+  .profile-pic {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #eee;
+    }
+  }
+
+  .contact-info, .education, .references {
+    margin-bottom: 20px;
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    p, span {
+      font-size: 14px;
+      color: #555;
+    }
+  }
+}

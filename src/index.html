@@ -1,16 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    @@include('blocks/head.html')
+    <!-- @@include('blocks/head.html') -->
 
     <meta charset="UTF-8">
-    <title>Main page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <link rel="stylesheet" href="css/main.min.css">
+
 </head>
 <body>
-    @@include('blocks/footer.html')
+    <!-- @@include('blocks/footer.html') -->
 
-<h1>My lab</h1><img src="img/im1.jpg" alt="not image">
+    <div class="container">
+        <div class="resume">
+            <div class="left-section">
+                <div class="about-me">
+                    <h2>About Me</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+                </div>
 
+                <div class="job-experience">
+                    <h2>Job Experience</h2>
+                    <div class="job">
+                        <h3>Senior Web Designer</h3>
+                        <span>Creative Agency / Chicago</span>
+                        <span>2020 - Present</span>
+                        <p>Lorem Ipsum has been the industry’s standard dummy text...</p>
+                    </div>
+                    <div class="job">
+                        <h3>Graphic Designer</h3>
+                        <span>Creative Market / Chicago</span>
+                        <span>2015 - 2020</span>
+                        <p>Lorem Ipsum has been the industry’s standard dummy text...</p>
+                    </div>
+                    <div class="job">
+                        <h3>Marketing Manager</h3>
+                        <span>Manufacturing Agency / NJ</span>
+                        <span>2013 - 2015</span>
+                        <p>Lorem Ipsum has been the industry’s standard dummy text...</p>
+                    </div>
+                </div>
 
+                <div class="skills">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Microsoft Word</li>
+                        <li>HTML5/CSS3</li>
+                        <li>Microsoft Powerpoint</li>
+                    </ul>
+                </div>
+
+                <div class="language-hobbies">
+                    <div class="languages">
+                        <h2>Language</h2>
+                        <ul>
+                            <li>English</li>
+                            <li>Spanish</li>
+                            <li>French</li>
+                            <li>German</li>
+                        </ul>
+                    </div>
+                    <div class="hobbies">
+                        <h2>Hobbies</h2>
+                        <ul>
+                            <li>Reading Books</li>
+                            <li>Traveling</li>
+                            <li>Playing Chess</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="profile-pic">
+                    <img src="img/im1.jpg" alt="Profile Picture">
+                </div>
+
+                <div class="contact-info">
+                    <h2>Contact Me</h2>
+                    <p>+1-718-310-5588</p>
+                    <p>www.yourwebsite.com</p>
+                    <p>769 Prudence, Lincoln Park, MI</p>
+                </div>
+
+                <div class="education">
+                    <h2>Education</h2>
+                    <p>Stanford University</p>
+                    <span>Master Degree Graduate</span>
+                    <span>2011 - 2013</span>
+
+                    <p>University of Chicago</p>
+                    <span>Bachelor Degree Graduate</span>
+                    <span>2007 - 2010</span>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <p>Darwin B. Magana</p>
+                    <p>2813 Shope Lane, Mancos, CO</p>
+                    <p>Tel: +1-970-533-3393</p>
+
+                    <p>Robert J. Belvin</p>
+                    <p>2119 Fairfax Drive, Newark, NJ</p>
+                    <p>Tel: +1-908-897-5103</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

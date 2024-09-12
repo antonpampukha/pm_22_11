@@ -5,34 +5,24 @@ const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const cssnano = require('gulp-cssnano');
 const browserSync = require('browser-sync').create();
-
-// Dynamic import of ESM module autoprefixer
-async function getAutoprefixer() {
-    const autoprefixer = await import('gulp-autoprefixer');
-    return autoprefixer.default;
-}
-
-async function getImagemin() {
-    const imagemin = await import('gulp-imagemin');
-    return imagemin.default;
-}
+const file_include = require('gulp-file-include')
+const imagemin = require('gulp-imagemin');
 
 // HTML processing
 function html() {
-    return gulp.src("src/*.html")
-        .pipe(gulp.dest("dist"))
+    return gulp.src("src/index.html")
+        .pipe(file_include({
+            prefix:'@@',
+            basepath:'@file'
+        }))
+        .pipe(gulp.dest("dist/"))
         .pipe(browserSync.stream());
 }
 
-// Compile Sass to CSS, add prefixes and minify the code
-async function sassTask() {
-    const autoprefixer = await getAutoprefixer();
-    return gulp.src("src/scss/*.sass")
+// Compile Sass to CSS, add prefixes, and minify the code
+function sassTask() {
+    return gulp.src("src/scss/*.scss")
         .pipe(sass().on('error', sass.logError))
-        .pipe(autoprefixer({
-            overrideBrowserslist: ['last 2 versions'],
-            cascade: false
-        }))
         .pipe(cssnano())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest("dist/css"))
@@ -49,16 +39,15 @@ function scripts() {
         .pipe(browserSync.stream());
 }
 
-// Compress images
-async function imgs() {
-    const imagemin = await getImagemin();
-    return gulp.src("src/img/*.{jpg,jpeg,png,gif}")
+// Compress img
+function imgs() {
+    return gulp.src("src/img/*.{jpg,jpeg,png,gif}", {encoding:false})
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{ removeViewBox: false }],
             interlaced: true
         }))
-        .pipe(gulp.dest("dist/images"))
+        .pipe(gulp.dest("dist/img"))
         .pipe(browserSync.stream());
 }
 
@@ -67,7 +56,8 @@ function browserSyncInit(done) {
     browserSync.init({
         server: {
             baseDir: "./dist"
-        }
+        },
+        cache: false
     });
     done();
 }
@@ -75,11 +65,10 @@ function browserSyncInit(done) {
 // Watch for changes in files
 function watchFiles() {
     gulp.watch("src/*.html", html);
-    gulp.watch("src/scss/*.sass", sassTask);
+    gulp.watch("src/scss/*.scss", sassTask);
     gulp.watch("src/js/*.js", scripts);
     gulp.watch("src/img/*.{jpg,jpeg,png,gif}", imgs);
 }
-
 
 exports.html = html;
 exports.sass = sassTask;

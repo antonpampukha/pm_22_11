@@ -9,8 +9,30 @@ body {
 
 .container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
+}
+
+.top-section {
+  display: flex;
+  width: 860px;
+  background-color: #d9d6d6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  height: 200px;
+}
+
+.about-me{
+  width: 60%;
+  padding: 20px;
+}
+.profile-name{
+  width: 40%;
+  padding: 15px;
+
+  display: flow;
+  font-family: "Book Antiqua", "sans-serif";
 }
 
 .resume {
@@ -42,6 +64,7 @@ body {
     .job {
       margin-bottom: 15px;
 
+
       h3 {
         font-size: 18px;
         color: #333;
@@ -61,20 +84,20 @@ body {
   }
 
   .skills ul, .language-hobbies ul {
-    list-style: none;
     padding: 0;
+    list-style-type: disc;
 
     li {
       font-size: 16px;
       color: #555;
-      padding: 5px 0;
+      padding: 5px 5px;
     }
   }
 }
 
 .right-section {
   width: 40%;
-  padding: 20px;
+  padding: 30px;
   background-color: #f9f9f9;
 
   .profile-pic {

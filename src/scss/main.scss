@@ -8,38 +8,42 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
+  max-width: 900px;
   justify-content: center;
-  padding: 20px;
+  padding:  2px;
+  margin: 0 auto;
 }
 
 .top-section {
   display: flex;
-  width: 860px;
+  width: 880px;
   background-color: #d9d6d6;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   height: 200px;
+  margin: -10px;
+}
+
+.profile-name{
+  width: 60%;
+  padding: 15px;
+  font-family: "Book Antiqua", "sans-serif";
+  margin: 10px;
 }
 
 .about-me{
-  width: 60%;
-  padding: 20px;
-}
-.profile-name{
   width: 40%;
-  padding: 15px;
-
-  display: flow;
-  font-family: "Book Antiqua", "sans-serif";
+  padding: 20px;
+  margin: 10px;
 }
 
 .resume {
   display: flex;
-  width: 900px;
-  background-color: white;
+  width: 860px;
+  background-color: #d9d6d6;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 0 auto;
 }
 
 .left-section {

@@ -1,134 +1,14 @@
-@import "./blocks/header";
-@import "./blocks/footer";
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  margin: 0;
-  padding: 0;
-}
+//@import "./blocks/header";
+//@import "./blocks/footer";
 
-.container {
-  max-width: 900px;
-  justify-content: center;
-  padding:  2px;
-  margin: 0 auto;
-}
-
-.top-section {
-  display: flex;
-  width: 880px;
-  background-color: #d9d6d6;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  height: 200px;
-  margin: -10px;
-}
-
-.profile-name{
-  width: 60%;
-  padding: 15px;
-  font-family: "Book Antiqua", "sans-serif";
-  margin: 10px;
-}
-
-.about-me{
-  width: 40%;
-  padding: 20px;
-  margin: 10px;
-}
-
-.resume {
+.row {
   display: flex;
   width: 860px;
-  background-color: #d9d6d6;
+  background-color: #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 30px;
   margin: 0 auto;
+  justify-content: space-between;
 }
 
-.left-section {
-  width: 60%;
-  padding: 20px;
-  border-right: 2px solid #eee;
 
-  h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #333;
-  }
-
-  p {
-    color: #666;
-    line-height: 1.6;
-  }
-
-  .job-experience {
-    margin-bottom: 20px;
-
-    .job {
-      margin-bottom: 15px;
-
-
-      h3 {
-        font-size: 18px;
-        color: #333;
-      }
-
-      span {
-        display: block;
-        color: #777;
-        font-size: 14px;
-      }
-
-      p {
-        font-size: 14px;
-        color: #555;
-      }
-    }
-  }
-
-  .skills ul, .language-hobbies ul {
-    padding: 0;
-    list-style-type: disc;
-
-    li {
-      font-size: 16px;
-      color: #555;
-      padding: 5px 5px;
-    }
-  }
-}
-
-.right-section {
-  width: 40%;
-  padding: 30px;
-  background-color: #f9f9f9;
-
-  .profile-pic {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-
-    img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 3px solid #eee;
-    }
-  }
-
-  .contact-info, .education, .references {
-    margin-bottom: 20px;
-
-    h2 {
-      font-size: 20px;
-      margin-bottom: 10px;
-      color: #333;
-    }
-
-    p, span {
-      font-size: 14px;
-      color: #555;
-    }
-  }
-}

@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="scss/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.min.css">
 </head>
@@ -14,14 +17,28 @@
 <!-- @@include('blocks/footer.html') -->
 <header>
     <div class="container">
-        <div class="row">
-            <div class="col-md-7" style="font-family: 'Book Antiqua', sans-serif;">
-                <h2>About Me</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum...</p>
+        <div class="my-row align-items-center" style="background-color: #E0E0E0">
+            <div class="col-md-6" style="width: 55%;">
+                <div class="about-me">
+                    <div class="about-me-label">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                    </svg>
+                        <h1>About me</h1>
+                    </div>
+                    <p style="text-align: justify; font-weight: 350; color: #333333">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type. It has survived not
+                        only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                </div>
             </div>
-            <div class="col-md-5">
-                <h1>NOEL TAYLOR</h1>
-                <h3>Graphic & web designer</h3>
+            <div class="col-md-4">
+                <div class="my-name">
+                    <h1>NOEL TAYLOR</h1>
+                    <h2>GRAPHIC & WEB DESIGNER</h2>
+                </div>
             </div>
         </div>
     </div>
@@ -29,16 +46,18 @@
 
 <footer>
 <div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            <div class="mb-4">
+    <div class="my-row" style="height: 90%; background-color: #ebebeb">
+    <div class="col-md-8">
+            <div class="job">
                 <h2>Job Experience</h2>
-                <div class="mx-1">
+                <div class="row w-25">
+                <div class="mx-4">
                     <h3>Senior Web Designer</h3>
                     <span>Creative Agency / Chicago</span>
                     <span>2020 - Present</span>
                     <p>Lorem Ipsum has been the industry’s standard dummy text...</p>
                 </div>
+                    </div>
                 <div class="mx-1">
                     <h3>Graphic Designer</h3>
                     <span>Creative Market / Chicago</span>
@@ -85,8 +104,8 @@
 
         </div>
 
-        <div class="col-md-4">
-            <img class="col-md-4" src="img/im1.jpg" alt="Profile Picture" style="width: 150px; height: 150px ;border-radius: 50%;border: 3px solid #eee;">
+        <div class="col-md-4" style="background-color: #333333; color: white">
+            <img class="image" src="img/im1.jpg" alt="Profile Picture" style="width: 150px; height: 150px ;border-radius: 50%;border: 3px solid #eee;">
             <div class="p-2">
                 <h2>Contact Me</h2>
                 <p>+1-718-310-5588</p>

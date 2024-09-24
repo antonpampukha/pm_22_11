@@ -8,6 +8,7 @@ p{
   font-weight: 350;
   color: #333333;
 }
+
 .container {
   background-color: #ebebeb;
   font-family: 'Poppins', 'sans-serif';
@@ -22,7 +23,7 @@ p{
 }
 .about-me h1 {
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 25px;
   font-weight: bold;
   display: inline-block;
   margin: 0 0 0 5px;
@@ -49,7 +50,7 @@ p{
   font-weight: 400;
   letter-spacing: 1.5px;
 }
-.col-md-4{
+.col-md-5{
   margin-left: 80px;
 }
 
@@ -61,14 +62,17 @@ p{
 }
 .job-label h1{
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 25px;
   font-weight: bold;
   display: inline-block;
-  margin: 0 0 0 5px;
+  margin: 0 0 0 8px;
 }
 .job-desc{
   display: flex;
   justify-content: space-between;
+  span{
+    font-weight: 600;
+  }
 }
 .job-desc h3{
   text-transform: uppercase;
@@ -91,6 +95,7 @@ p{
   margin-bottom: 10px;
 }
 .skill-desc h6{
+  font-size: 11px;
   margin: 0 20px 0 0;
 }
 #bar {
@@ -129,10 +134,81 @@ progress::-webkit-progress-value {
 }
 .list{
   display: inline-block;
+  ul{
+    margin: 0;
+  }
+}
+.list li span{
+  font-size: 16px;
 }
 .list li{
   text-transform: uppercase;
   margin-bottom: 5px;
+  font-size: 23px;
   font-weight: 550;
   margin-top: 0;
+}
+
+.contact-column{
+    display: inline-block;
+    margin-top: 140px;
+}
+
+.contact-column{
+  h1,h2,h3, p{
+  color: #FFFFFF;
+  }
+  h1{
+    margin-bottom: 0;
+  }
+  h3{
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  p{
+    margin-bottom: 3px;
+    margin-top: 0;
+  }
+}
+.circle-container{
+  position: absolute;
+  top: -228px;
+  left: -8px;
+  display: flex;
+  border-radius: 50%;
+  border: 15px solid #FFFFFF;
+  background: #ebebeb;
+}
+.image{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 10px solid #333333;
+}
+
+.contact-me{
+  display: block;
+  justify-content: center;
+  margin-left: 50px;
+}
+.contact-pic{
+  display: flex;
+  align-items: center;
+}
+.contact-pic p{
+  margin-left: 10px;
+}
+.education{
+  margin-left: 50px;
+  display: block;
+  align-items: center;
+  .job-label{
+    margin-top: 25px;
+  }
+}
+
+.education span{
+  text-transform: uppercase;
+  font-weight: 350;
+  color: #FFFFFF;
 }

@@ -10,31 +10,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="scss/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
 <!-- @@include('blocks/footer.html') -->
+<div class="container-fluid">
 <header>
     <div class="container">
-        <div class="my-row align-items-center" style="background-color: #E0E0E0">
-            <div class="col-md-6" style="width: 55%;">
+        <div class="my-row" style="min-height: 250px; background-color: #E0E0E0">
+            <div class="col-md-6" style="max-width: 1000px;width: 60%;">
                 <div class="about-me">
                     <div class="about-me-label">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
                         <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
                     </svg>
                         <h1>About me</h1>
                     </div>
-                    <p style="text-align: justify; font-weight: 350; color: #333333">
+                    <p style="text-align: justify; color: #333333">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
                         standard dummy text ever since the 1500s, when an unknown printer took a galley of type. It has survived not
                         only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                     </p>
                 </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-5" style="width: 40%; display: flex; justify-content: left;">
                 <div class="my-name">
                     <h1>NOEL TAYLOR</h1>
                     <h2>GRAPHIC & WEB DESIGNER</h2>
@@ -47,10 +47,10 @@
 <footer>
 <div class="container">
     <div class="my-row" style=" background-color: #FFFFFF; padding-bottom: 0">
-        <div class="col-md-6" style="width: 55%;">
+        <div class="col-md-6" style="max-width: 1000px;width: 60%;">
             <div class="job">
                 <div class="job-label">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
                         <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5"/>
                         <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z"/>
                     </svg>
@@ -65,7 +65,7 @@
                     <div class="job-place-city">
                         <span><i>Creative Agency / Chicago</i></span>
                     </div>
-                    <p>Lorem Ipsum has been the industry’s standard dummy text...</p>
+                    <p>Lorem Ipsum has been the industry’s standard dummy text Lorem Ipsum has been the industry’s standard dummy text...</p>
                 </div>
 
                 <div class="row">
@@ -76,7 +76,7 @@
                     <div class="job-place-city">
                         <span><i>Creative Market / Chicago</i></span>
                     </div>
-                    <p>Lorem Ipsum has been the industry’s standard dummy text...</p>
+                    <p>Lorem Ipsum has been the industry’s standard dummy text Lorem Ipsum has been the industry’s standard dummy text...</p>
                 </div>
 
                 <div class="row">
@@ -87,13 +87,13 @@
                     <div class="job-place-city">
                         <span><i>Manufacturing Agency / NJ</i></span>
                     </div>
-                    <p>Lorem Ipsum has been the industry’s standard dummy text...</p>
+                    <p>Lorem Ipsum has been the industry’s standard dummy text Lorem Ipsum has been the industry’s standard dummy text...</p>
                 </div>
             </div>
 
             <div class="skills">
-                <div class="job-label">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-pie-chart-fill" viewBox="0 0 16 16">
+                <div class="job-label" style="margin-top: 60px">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-pie-chart-fill" viewBox="0 0 16 16">
                         <path d="M15.985 8.5H8.207l-5.5 5.5a8 8 0 0 0 13.277-5.5zM2 13.292A8 8 0 0 1 7.5.015v7.778zM8.5.015V7.5h7.485A8 8 0 0 0 8.5.015"/>
                     </svg>
                     <h1>Skills</h1>
@@ -132,7 +132,7 @@
             <div class="language-n-hobby">
                 <div class="language">
                     <div class="job-label">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16">
                             <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/>
                         </svg>
                         <h1>Language</h1>
@@ -154,15 +154,14 @@
                 </div>
                 <div class="hobby">
                     <div class="job-label">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-flag-fill" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-flag-fill" viewBox="0 0 16 16">
                             <path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12 12 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A20 20 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a20 20 0 0 0 1.349-.476l.019-.007.004-.002h.001"/>
                         </svg>
                         <h1>Hobbies</h1>
                     </div>
                     <div class="list">
-
                         <ul style="padding-left: 20px">
-                            <li><span>Books</span></li>
+                            <li><span>Reading Books</span></li>
                             <li><span>Traveling</span></li>
                             <li><span>Playing Chess</span></li>
                         </ul>
@@ -171,7 +170,7 @@
             </div>
         </div>
 
-        <div class="col-md-5" style="width:41% ;background-color: #333333; color: white; position: relative; display: flex; justify-content: left">
+        <div class="col-md-5" style="width: 40% ;background-color: #333333; color: white; position: relative; display: flex; justify-content: left">
             <div class="contact-column">
 
                 <div class="circle-container">
@@ -180,7 +179,7 @@
 
                 <div class="contact-me">
                     <div class="job-label" style="margin-bottom: 10px">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
                             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
                         </svg>
                         <h1>Contact Me</h1>
@@ -208,7 +207,7 @@
 
                 <div class="education">
                     <div class="job-label" style="margin-bottom: 10px">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-mortarboard" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-mortarboard" viewBox="0 0 16 16">
                             <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917zM8 8.46 1.758 5.965 8 3.052l6.242 2.913z"/>
                             <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46z"/>
                         </svg>
@@ -225,7 +224,7 @@
 
                 <div class="education">
                     <div class="job-label" style="margin-bottom: 10px">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
                             <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/>
                         </svg>
                         <h1>References</h1>
@@ -246,6 +245,7 @@
     </div>
 </div>
 </footer>
+</div>
 <script src="js/bootstrap.bundle.min.js" ></script>
 </body>
 </html>

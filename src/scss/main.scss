@@ -1,32 +1,37 @@
 //@import "./blocks/header";
 //@import "./blocks/footer";
+
 h1,h2,h3,p{
   color: #333333;
 }
 p{
   text-align: justify;
   font-weight: 350;
+  font-size: 20px;
   color: #333333;
 }
 
 .container {
   background-color: #ebebeb;
   font-family: 'Poppins', 'sans-serif';
+  max-width: 2000px;
+  max-height: 1130px;
 }
 
 .my-row {
   display: flex;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 70px;
-  margin: 0 auto;
-  width: 860px;
+  padding: 90px;
+  margin: 0;
+
+
 }
 .about-me h1 {
   text-transform: uppercase;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: bold;
   display: inline-block;
-  margin: 0 0 0 5px;
+  margin: 0 0 0 15px;
 }
 .about-me-label{
   display: flex;
@@ -38,20 +43,21 @@ p{
 
 }
 .my-name h1{
-  font-size: 49px;
+  font-size: 70px;
   font-weight: 800;
-  margin: 0;
+  margin: -30px 0 0;
   white-space: nowrap;
 
 }
 .my-name h2{
   margin: 0;
-  font-size: 19px;
-  font-weight: 400;
+  font-size: 27px;
+  font-weight: 380;
   letter-spacing: 1.5px;
 }
 .col-md-5{
-  margin-left: 80px;
+  margin-left: 120px;
+  max-width: 480px;
 }
 
 .job-label{
@@ -62,23 +68,30 @@ p{
 }
 .job-label h1{
   text-transform: uppercase;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: bold;
   display: inline-block;
-  margin: 0 0 0 8px;
+  margin: 0 0 0 15px;
 }
+
 .job-desc{
   display: flex;
   justify-content: space-between;
   span{
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 21px;
   }
 }
 .job-desc h3{
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 25px;
   font-weight: bold;
   margin: 0 0 0 0;
+}
+.job-place-city{
+  span{
+    font-size: 20px;
+  }
 }
 .row{
   margin-bottom: 25px;
@@ -95,11 +108,12 @@ p{
   margin-bottom: 10px;
 }
 .skill-desc h6{
-  font-size: 11px;
+  font-size: 16px;
+  font-weight: 460;
   margin: 0 20px 0 0;
 }
 #bar {
-  width: 85px;
+  width: 95px;
   height: 8px;
 }
 
@@ -127,10 +141,14 @@ progress::-webkit-progress-value {
 .language-n-hobby{
   display: flex;
   justify-content: space-between;
+  margin-top: 23px;
 }
 .language-desc{
   display: flex;
   align-items: unset;
+}
+.hobby{
+  margin-right: 30px;
 }
 .list{
   display: inline-block;
@@ -139,19 +157,20 @@ progress::-webkit-progress-value {
   }
 }
 .list li span{
-  font-size: 16px;
+  font-size: 22px;
+  font-weight: 500;
 }
 .list li{
   text-transform: uppercase;
   margin-bottom: 5px;
-  font-size: 23px;
+  font-size: 28px;
   font-weight: 550;
   margin-top: 0;
 }
-
 .contact-column{
     display: inline-block;
-    margin-top: 140px;
+    margin-top: 220px;
+
 }
 
 .contact-column{
@@ -172,16 +191,16 @@ progress::-webkit-progress-value {
 }
 .circle-container{
   position: absolute;
-  top: -228px;
-  left: -8px;
+  top: -285px;
+  left: -10px;
   display: flex;
   border-radius: 50%;
   border: 15px solid #FFFFFF;
   background: #ebebeb;
 }
 .image{
-  width: 300px;
-  height: 300px;
+  width: 455px;
+  height: 455px;
   border-radius: 50%;
   border: 10px solid #333333;
 }
@@ -205,10 +224,14 @@ progress::-webkit-progress-value {
   .job-label{
     margin-top: 25px;
   }
+  .job-desc{
+    margin-top: 10px;
+  }
 }
 
 .education span{
   text-transform: uppercase;
   font-weight: 350;
+  font-size: 18px;
   color: #FFFFFF;
 }

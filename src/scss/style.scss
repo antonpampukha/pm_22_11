@@ -60,18 +60,41 @@ p{
   max-width: 480px;
 }
 
+.accordion{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.btn{
+  cursor: pointer;
+}
 .job-label{
   display: flex;
   align-items: center;
   margin-bottom: 30px;
   margin-top: 15px;
 }
+
 .job-label h1{
   text-transform: uppercase;
   font-size: 35px;
   font-weight: bold;
   display: inline-block;
   margin: 0 0 0 15px;
+}
+
+.content{
+
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-out, opacity 0.1s ease-out 0.5s, visibility 0.1s ease-out 0.5s;
+}
+
+.content.active{
+  display: block;
+  max-height: 500px;
+
+  transition: max-height 0.5s ease-out, opacity 0.1s ease-out 0.5s, visibility 0.1s ease-out 0.5s;
 }
 
 .job-desc{
@@ -94,7 +117,7 @@ p{
   }
 }
 .row{
-  margin-bottom: 25px;
+  margin-bottom: 25px !important;
 }
 .all-skills {
   display: flex;
@@ -112,7 +135,20 @@ p{
   font-weight: 460;
   margin: 0 20px 0 0;
 }
-#bar {
+
+#bar1 {
+  width: 95px;
+  height: 8px;
+}#bar2 {
+  width: 95px;
+  height: 8px;
+}#bar3 {
+  width: 95px;
+  height: 8px;
+}#bar4 {
+  width: 95px;
+  height: 8px;
+}#bar5 {
   width: 95px;
   height: 8px;
 }
@@ -191,7 +227,7 @@ progress::-webkit-progress-value {
 }
 .circle-container{
   position: absolute;
-  top: -285px;
+  top: -325px;
   left: -10px;
   display: flex;
   border-radius: 50%;

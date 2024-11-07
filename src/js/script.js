@@ -22,3 +22,26 @@ titles.forEach((header) => {
         }
     });
 });
+
+
+async function getData() {
+    try {
+        const response = await fetch('src/data/data.json');
+        if (!response.ok)
+            throw new Error('Помилка при завантаженні даних');
+        const data = await response.json();
+        renderData(data);
+    } catch (error) {
+        console.error('Помилка під час отримання даних:', error);
+    }
+}
+
+function renderData(data) {
+    const container = document.getElementById('data-container');
+    data.forEach(item => {
+        const div = document.createElement('div');
+        div.textContent = `Year: ${item.year}, Count: ${item.count}`;
+        container.appendChild(div);
+    });
+}
+getData();

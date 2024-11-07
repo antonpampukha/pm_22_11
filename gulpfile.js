@@ -51,6 +51,11 @@ function imgs() {
         .pipe(browserSync.stream());
 }
 
+function jsonSync() {
+    return gulp.src("src/data/*.json")
+        .pipe(gulp.dest("dist/data"))
+        .pipe(browserSync.stream());
+}
 // Initialize BrowserSync server
 function browserSyncInit(done) {
     browserSync.init({
@@ -67,6 +72,7 @@ function watchFiles() {
     gulp.watch("src/*.html", html);
     gulp.watch("src/scss/*.scss", sassTask);
     gulp.watch("src/js/*.js", scripts);
+    gulp.watch("src/data/*.json", jsonSync);
     gulp.watch("src/img/*.{jpg,jpeg,png,gif}", imgs);
 }
 
@@ -74,10 +80,11 @@ exports.html = html;
 exports.sass = sassTask;
 exports.scripts = scripts;
 exports.imgs = imgs;
+exports.jsonSync = jsonSync;
 exports.watch = gulp.parallel(watchFiles, browserSyncInit);
 
 // Default task to run BrowserSync and watch for changes
 exports.default = gulp.series(
-    gulp.parallel(html, sassTask, scripts, imgs),
+    gulp.parallel(html, sassTask, scripts, imgs, jsonSync),
     gulp.parallel(watchFiles, browserSyncInit)
 );

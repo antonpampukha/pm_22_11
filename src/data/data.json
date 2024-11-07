@@ -1,10 +1,42 @@
-[
-  { "year": 2010, "count": 10 },
-  { "year": 2011, "count": 20 },
-  { "year": 2012, "count": 15 },
-  { "year": 2013, "count": 25 },
-  { "year": 2014, "count": 22 },
-  { "year": 2015, "count": 30 },
-  { "year": 2016, "count": 28 }
+{
+  "aboutMe": {
+    "title": "About Me",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+  },
+  "personalInfo": {
+    "name": "Noel Taylor",
+    "jobTitle": "Graphic & Web Designer"
+  },
+  "nameEx": "Job Experience",
 
-]
+  "jobExperience": [
+    {
+      "title": "Senior Web Designer",
+      "years": "2020 - Present",
+      "company": "Creative Agency / Chicago",
+      "description": "Lorem Ipsum has been the industry’s standard dummy text..."
+    },
+    {
+      "title": "Graphic Designer",
+      "years": "2015 - 2020",
+      "company": "Creative Market / Chicago",
+      "description": "Lorem Ipsum has been the industry’s standard dummy text..."
+    },
+    {
+      "title": "Marketing Manager",
+      "years": "2013 - 2015",
+      "company": "Manufacturing Agency / NJ",
+      "description": "Lorem Ipsum has been the industry’s standard dummy text..."
+    }
+  ],
+  "nameSk": "Skills",
+  "skills": [
+    {"name": "Adobe Photoshop", "level": 75},
+    {"name": "Microsoft Word", "level": 75},
+    {"name": "HTML5/CSS3", "level": 75},
+    {"name": "Adobe Illustrator", "level": 75},
+    {"name": "Microsoft PowerPoint", "level": 75}
+  ],
+  "nameLan": "Language",
+  "nameHob": "Hobbies"
+}

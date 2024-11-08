@@ -27,7 +27,7 @@ titles.forEach((header) => {
 async function getData() {
     try {
         const response = await fetch('http://localhost:8080/dist/data/data.json', {cache: "no-store"});
-        if (!response.ok){
+        if (!response.ok) {
             throw new Error('Помилка при завантаженні даних');
         }
         const data = await response.json();
@@ -144,7 +144,19 @@ function renderData(data) {
     });
 
     document.getElementById('language-name').textContent = data.nameLan;
+
+    const languageFirstContainer = document.getElementById('language-first');
+    languageFirstContainer.innerHTML = ''; // Clear previous content
+    data.languageFirstBlock.forEach(language => {
+        const languageDiv = document.createElement('li');
+        languageDiv.innerHTML = `
+            <span>${language.name}</span>
+        `;
+        languageFirstContainer.appendChild(languageDiv);
+    });
+
     document.getElementById('hobby-name').textContent = data.nameHob;
+
 }
 
 getData();

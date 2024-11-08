@@ -42,5 +42,10 @@
       {"name": "Microsoft PowerPoint", "level": 75}],
 
   "nameLan": "Language",
+  "languageFirstBlock": [
+    {"name" : "English"},
+    {"name" : "Spanish"}
+  ],
+
   "nameHob": "Hobbies"
 }

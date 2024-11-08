@@ -155,8 +155,29 @@ function renderData(data) {
         languageFirstContainer.appendChild(languageDiv);
     });
 
+
+    const languageSecondContainer = document.getElementById('language-second');
+    languageSecondContainer.innerHTML = ''; // Clear previous content
+    data.languageSecondBlock.forEach(language => {
+        const languageDiv = document.createElement('li');
+        languageDiv.innerHTML = `
+            <span>${language.name}</span>
+        `;
+        languageSecondContainer.appendChild(languageDiv);
+    });
+
+
     document.getElementById('hobby-name').textContent = data.nameHob;
 
+    const hobbiesContainer = document.getElementById('hobbies-decs');
+    hobbiesContainer.innerHTML = ''; // Clear previous content
+    data.hobbiesBlock.forEach(hobby => {
+        const hobbyDiv = document.createElement('li');
+        hobbyDiv.innerHTML = `
+            <span>${hobby.name}</span>
+        `;
+        hobbiesContainer.appendChild(hobbyDiv);
+    });
 }
 
 getData();

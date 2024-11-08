@@ -32,20 +32,30 @@
   "nameSk": "Skills",
 
 
-    "skillsFirstBlock": [
-    {"name": "Adobe Photoshop", "level": 75},
-    {"name": "Microsoft Word", "level": 75},
-    {"name": "HTML5/CSS3", "level": 75}],
+  "skillsFirstBlock": [
+  {"name": "Adobe Photoshop", "level": 75},
+  {"name": "Microsoft Word", "level": 75},
+  {"name": "HTML5/CSS3", "level": 75}],
 
-    "skillsSecondBlock": [
-      {"name": "Adobe Illustrator", "level": 75},
-      {"name": "Microsoft PowerPoint", "level": 75}],
+  "skillsSecondBlock": [
+    {"name": "Adobe Illustrator", "level": 75},
+    {"name": "Microsoft PowerPoint", "level": 75}],
 
   "nameLan": "Language",
+
   "languageFirstBlock": [
     {"name" : "English"},
-    {"name" : "Spanish"}
-  ],
+    {"name" : "Spanish"}],
 
-  "nameHob": "Hobbies"
+  "languageSecondBlock": [
+    {"name" : "French"},
+    {"name" : "German"}],
+
+  "nameHob": "Hobbies",
+
+  "hobbiesBlock": [
+    {"name": "Reading Books"},
+    {"name": "Traveling"},
+    {"name": "Playing Chess"}
+  ]
 }

@@ -26,7 +26,7 @@ titles.forEach((header) => {
 
 async function getData() {
     try {
-        const response = await fetch('http://localhost:8080/dist/data/data.json', {cache: "no-store"});
+        const response = await fetch('http://localhost:8080/data/data.json', {cache: "no-store"});
         if (!response.ok) {
             throw new Error('Помилка при завантаженні даних');
         }
@@ -181,4 +181,4 @@ function renderData(data) {
 }
 
 getData();
-setInterval(getData, 5000);
+setInterval(getData, 1000);
